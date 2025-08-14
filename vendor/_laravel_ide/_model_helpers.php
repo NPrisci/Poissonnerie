@@ -5,16 +5,8 @@ namespace App\Models {
     /**
      * App\Models\Categorie
      *
-     * @property \Illuminate\Support\Carbon|null $updated_at
-     * @property \Illuminate\Support\Carbon|null $created_at
-     * @property string $nom
-     * @property int $id
      * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Produit> $produits
      * @property-read int|null $produits_count
-     * @method static \Illuminate\Database\Eloquent\Builder<Categorie>|Categorie whereId($value)
-     * @method static \Illuminate\Database\Eloquent\Builder<Categorie>|Categorie whereNom($value)
-     * @method static \Illuminate\Database\Eloquent\Builder<Categorie>|Categorie whereCreatedAt($value)
-     * @method static \Illuminate\Database\Eloquent\Builder<Categorie>|Categorie whereUpdatedAt($value)
      * @method static \Illuminate\Database\Eloquent\Builder<Categorie>|Categorie newModelQuery()
      * @method static \Illuminate\Database\Eloquent\Builder<Categorie>|Categorie newQuery()
      * @method static \Illuminate\Database\Eloquent\Builder<Categorie>|Categorie query()
@@ -314,26 +306,10 @@ namespace App\Models {
     /**
      * App\Models\Commande
      *
-     * @property \Illuminate\Support\Carbon|null $updated_at
-     * @property \Illuminate\Support\Carbon|null $created_at
-     * @property string $statut
-     * @property float $avance
-     * @property float $total
-     * @property array|null $produits
-     * @property int $user_id
-     * @property int $id
      * @property-read mixed $montant_calcule
      * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Produit> $produits
      * @property-read int|null $produits_count
      * @property-read \App\Models\User $user
-     * @method static \Illuminate\Database\Eloquent\Builder<Commande>|Commande whereId($value)
-     * @method static \Illuminate\Database\Eloquent\Builder<Commande>|Commande whereUserId($value)
-     * @method static \Illuminate\Database\Eloquent\Builder<Commande>|Commande whereProduits($value)
-     * @method static \Illuminate\Database\Eloquent\Builder<Commande>|Commande whereTotal($value)
-     * @method static \Illuminate\Database\Eloquent\Builder<Commande>|Commande whereAvance($value)
-     * @method static \Illuminate\Database\Eloquent\Builder<Commande>|Commande whereStatut($value)
-     * @method static \Illuminate\Database\Eloquent\Builder<Commande>|Commande whereCreatedAt($value)
-     * @method static \Illuminate\Database\Eloquent\Builder<Commande>|Commande whereUpdatedAt($value)
      * @method static \Illuminate\Database\Eloquent\Builder<Commande>|Commande newModelQuery()
      * @method static \Illuminate\Database\Eloquent\Builder<Commande>|Commande newQuery()
      * @method static \Illuminate\Database\Eloquent\Builder<Commande>|Commande query()
@@ -633,23 +609,9 @@ namespace App\Models {
     /**
      * App\Models\CommandeProduit
      *
-     * @property \Illuminate\Support\Carbon|null $updated_at
-     * @property \Illuminate\Support\Carbon|null $created_at
-     * @property float $prix_unitaire
-     * @property int $quantite
-     * @property int $produit_id
-     * @property int $commande_id
-     * @property int $id
      * @property-read \App\Models\Commande $commande
      * @property-read \App\Models\Produit $produit
      * @property-read \App\Models\User $user
-     * @method static \Illuminate\Database\Eloquent\Builder<CommandeProduit>|CommandeProduit whereId($value)
-     * @method static \Illuminate\Database\Eloquent\Builder<CommandeProduit>|CommandeProduit whereCommandeId($value)
-     * @method static \Illuminate\Database\Eloquent\Builder<CommandeProduit>|CommandeProduit whereProduitId($value)
-     * @method static \Illuminate\Database\Eloquent\Builder<CommandeProduit>|CommandeProduit whereQuantite($value)
-     * @method static \Illuminate\Database\Eloquent\Builder<CommandeProduit>|CommandeProduit wherePrixUnitaire($value)
-     * @method static \Illuminate\Database\Eloquent\Builder<CommandeProduit>|CommandeProduit whereCreatedAt($value)
-     * @method static \Illuminate\Database\Eloquent\Builder<CommandeProduit>|CommandeProduit whereUpdatedAt($value)
      * @method static \Illuminate\Database\Eloquent\Builder<CommandeProduit>|CommandeProduit newModelQuery()
      * @method static \Illuminate\Database\Eloquent\Builder<CommandeProduit>|CommandeProduit newQuery()
      * @method static \Illuminate\Database\Eloquent\Builder<CommandeProduit>|CommandeProduit query()
@@ -949,16 +911,6 @@ namespace App\Models {
     /**
      * App\Models\Configuration
      *
-     * @property \Illuminate\Support\Carbon|null $updated_at
-     * @property \Illuminate\Support\Carbon|null $created_at
-     * @property string $valeur
-     * @property string $cle
-     * @property int $id
-     * @method static \Illuminate\Database\Eloquent\Builder<Configuration>|Configuration whereId($value)
-     * @method static \Illuminate\Database\Eloquent\Builder<Configuration>|Configuration whereCle($value)
-     * @method static \Illuminate\Database\Eloquent\Builder<Configuration>|Configuration whereValeur($value)
-     * @method static \Illuminate\Database\Eloquent\Builder<Configuration>|Configuration whereCreatedAt($value)
-     * @method static \Illuminate\Database\Eloquent\Builder<Configuration>|Configuration whereUpdatedAt($value)
      * @method static \Illuminate\Database\Eloquent\Builder<Configuration>|Configuration newModelQuery()
      * @method static \Illuminate\Database\Eloquent\Builder<Configuration>|Configuration newQuery()
      * @method static \Illuminate\Database\Eloquent\Builder<Configuration>|Configuration query()
@@ -1258,18 +1210,6 @@ namespace App\Models {
     /**
      * App\Models\Horaire
      *
-     * @property \Illuminate\Support\Carbon|null $updated_at
-     * @property \Illuminate\Support\Carbon|null $created_at
-     * @property string $heure_fermeture
-     * @property string $heure_ouverture
-     * @property string $jour
-     * @property int $id
-     * @method static \Illuminate\Database\Eloquent\Builder<Horaire>|Horaire whereId($value)
-     * @method static \Illuminate\Database\Eloquent\Builder<Horaire>|Horaire whereJour($value)
-     * @method static \Illuminate\Database\Eloquent\Builder<Horaire>|Horaire whereHeureOuverture($value)
-     * @method static \Illuminate\Database\Eloquent\Builder<Horaire>|Horaire whereHeureFermeture($value)
-     * @method static \Illuminate\Database\Eloquent\Builder<Horaire>|Horaire whereCreatedAt($value)
-     * @method static \Illuminate\Database\Eloquent\Builder<Horaire>|Horaire whereUpdatedAt($value)
      * @method static \Illuminate\Database\Eloquent\Builder<Horaire>|Horaire newModelQuery()
      * @method static \Illuminate\Database\Eloquent\Builder<Horaire>|Horaire newQuery()
      * @method static \Illuminate\Database\Eloquent\Builder<Horaire>|Horaire query()
@@ -1569,22 +1509,6 @@ namespace App\Models {
     /**
      * App\Models\Information
      *
-     * @property \Illuminate\Support\Carbon|null $updated_at
-     * @property \Illuminate\Support\Carbon|null $created_at
-     * @property string|null $heures_ouverture
-     * @property string|null $jours_ouverture
-     * @property string|null $adresse
-     * @property string|null $telephone
-     * @property string|null $email
-     * @property int $id
-     * @method static \Illuminate\Database\Eloquent\Builder<Information>|Information whereId($value)
-     * @method static \Illuminate\Database\Eloquent\Builder<Information>|Information whereEmail($value)
-     * @method static \Illuminate\Database\Eloquent\Builder<Information>|Information whereTelephone($value)
-     * @method static \Illuminate\Database\Eloquent\Builder<Information>|Information whereAdresse($value)
-     * @method static \Illuminate\Database\Eloquent\Builder<Information>|Information whereJoursOuverture($value)
-     * @method static \Illuminate\Database\Eloquent\Builder<Information>|Information whereHeuresOuverture($value)
-     * @method static \Illuminate\Database\Eloquent\Builder<Information>|Information whereCreatedAt($value)
-     * @method static \Illuminate\Database\Eloquent\Builder<Information>|Information whereUpdatedAt($value)
      * @method static \Illuminate\Database\Eloquent\Builder<Information>|Information newModelQuery()
      * @method static \Illuminate\Database\Eloquent\Builder<Information>|Information newQuery()
      * @method static \Illuminate\Database\Eloquent\Builder<Information>|Information query()
@@ -1884,20 +1808,8 @@ namespace App\Models {
     /**
      * App\Models\Panier
      *
-     * @property \Illuminate\Support\Carbon|null $updated_at
-     * @property \Illuminate\Support\Carbon|null $created_at
-     * @property int $quantite
-     * @property int $produit_id
-     * @property int $user_id
-     * @property int $id
      * @property-read \App\Models\Produit $produit
      * @property-read \App\Models\User $user
-     * @method static \Illuminate\Database\Eloquent\Builder<Panier>|Panier whereId($value)
-     * @method static \Illuminate\Database\Eloquent\Builder<Panier>|Panier whereUserId($value)
-     * @method static \Illuminate\Database\Eloquent\Builder<Panier>|Panier whereProduitId($value)
-     * @method static \Illuminate\Database\Eloquent\Builder<Panier>|Panier whereQuantite($value)
-     * @method static \Illuminate\Database\Eloquent\Builder<Panier>|Panier whereCreatedAt($value)
-     * @method static \Illuminate\Database\Eloquent\Builder<Panier>|Panier whereUpdatedAt($value)
      * @method static \Illuminate\Database\Eloquent\Builder<Panier>|Panier newModelQuery()
      * @method static \Illuminate\Database\Eloquent\Builder<Panier>|Panier newQuery()
      * @method static \Illuminate\Database\Eloquent\Builder<Panier>|Panier query()
@@ -2197,25 +2109,9 @@ namespace App\Models {
     /**
      * App\Models\Produit
      *
-     * @property \Illuminate\Support\Carbon|null $updated_at
-     * @property \Illuminate\Support\Carbon|null $created_at
-     * @property int $categorie_id
-     * @property string|null $image
-     * @property float $prix
-     * @property string|null $description
-     * @property string $nom
-     * @property int $id
      * @property-read \App\Models\Categorie $categorie
      * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Commande> $commandes
      * @property-read int|null $commandes_count
-     * @method static \Illuminate\Database\Eloquent\Builder<Produit>|Produit whereId($value)
-     * @method static \Illuminate\Database\Eloquent\Builder<Produit>|Produit whereNom($value)
-     * @method static \Illuminate\Database\Eloquent\Builder<Produit>|Produit whereDescription($value)
-     * @method static \Illuminate\Database\Eloquent\Builder<Produit>|Produit wherePrix($value)
-     * @method static \Illuminate\Database\Eloquent\Builder<Produit>|Produit whereImage($value)
-     * @method static \Illuminate\Database\Eloquent\Builder<Produit>|Produit whereCategorieId($value)
-     * @method static \Illuminate\Database\Eloquent\Builder<Produit>|Produit whereCreatedAt($value)
-     * @method static \Illuminate\Database\Eloquent\Builder<Produit>|Produit whereUpdatedAt($value)
      * @method static \Illuminate\Database\Eloquent\Builder<Produit>|Produit newModelQuery()
      * @method static \Illuminate\Database\Eloquent\Builder<Produit>|Produit newQuery()
      * @method static \Illuminate\Database\Eloquent\Builder<Produit>|Produit query()
@@ -2518,16 +2414,10 @@ namespace App\Models {
      * @property \Illuminate\Support\Carbon|null $updated_at
      * @property \Illuminate\Support\Carbon|null $created_at
      * @property string|null $remember_token
-     * @property \Illuminate\Support\Carbon|null $deleted_at
-     * @property string $role
-     * @property string $statut
      * @property string $password
      * @property \Illuminate\Support\Carbon|null $email_verified_at
      * @property string $email
-     * @property string|null $adresse
-     * @property string $telephone
-     * @property string $prenom
-     * @property string $nom
+     * @property string $name
      * @property int $id
      * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Panier> $panier
      * @property-read int|null $panier_count
@@ -2536,16 +2426,10 @@ namespace App\Models {
      * @property-read \Illuminate\Database\Eloquent\Collection<int, \Illuminate\Notifications\DatabaseNotification> $notifications
      * @property-read int|null $notifications_count
      * @method static \Illuminate\Database\Eloquent\Builder<User>|User whereId($value)
-     * @method static \Illuminate\Database\Eloquent\Builder<User>|User whereNom($value)
-     * @method static \Illuminate\Database\Eloquent\Builder<User>|User wherePrenom($value)
-     * @method static \Illuminate\Database\Eloquent\Builder<User>|User whereTelephone($value)
-     * @method static \Illuminate\Database\Eloquent\Builder<User>|User whereAdresse($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<User>|User whereName($value)
      * @method static \Illuminate\Database\Eloquent\Builder<User>|User whereEmail($value)
      * @method static \Illuminate\Database\Eloquent\Builder<User>|User whereEmailVerifiedAt($value)
      * @method static \Illuminate\Database\Eloquent\Builder<User>|User wherePassword($value)
-     * @method static \Illuminate\Database\Eloquent\Builder<User>|User whereStatut($value)
-     * @method static \Illuminate\Database\Eloquent\Builder<User>|User whereRole($value)
-     * @method static \Illuminate\Database\Eloquent\Builder<User>|User whereDeletedAt($value)
      * @method static \Illuminate\Database\Eloquent\Builder<User>|User whereRememberToken($value)
      * @method static \Illuminate\Database\Eloquent\Builder<User>|User whereCreatedAt($value)
      * @method static \Illuminate\Database\Eloquent\Builder<User>|User whereUpdatedAt($value)

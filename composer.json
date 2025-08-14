@@ -10,7 +10,8 @@
         "fedapay/fedapay-php": "^0.4.7",
         "illuminate/database": "*",
         "laravel/framework": "^12.0",
-        "laravel/tinker": "^2.10.1"
+        "laravel/tinker": "^2.10.1",
+        "symfony/string": "*"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
